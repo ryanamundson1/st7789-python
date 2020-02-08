@@ -45,6 +45,8 @@ print('Starting heat cam:...')
 
 camera = _get_capture_proc(fps)
 
+time.sleep(1)
+
 sleep_time = 1.0 / fps
 
 # Draw the image on the display hardware.
