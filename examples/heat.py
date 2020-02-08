@@ -54,6 +54,8 @@ while (True):
   time.sleep(sleep_time)
 
   frame = camera.stdout.read(size[0] * size[1] * 3)
+    
+  print(frame)
   
   image = Image.frombytes('RGB', size, frame)
   
