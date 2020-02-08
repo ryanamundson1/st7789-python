@@ -49,7 +49,7 @@ sleep_time = 1.0 / fps
 
 # Draw the image on the display hardware.
 print('Starting video')
-while (True):
+while (camera.poll() is None):
     
   time.sleep(sleep_time)
 
