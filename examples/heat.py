@@ -1,4 +1,4 @@
-import sys, subprocess
+import sys, subprocess, time
 
 from PIL import Image
 import ST7789 as ST7789
