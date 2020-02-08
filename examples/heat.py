@@ -43,7 +43,7 @@ print('Starting heat cam:...')
 # Resize the image
 #image = image.resize((WIDTH, HEIGHT))
 
-camera = self._get_capture_proc(fps)
+camera = _get_capture_proc(fps)
 
 sleep_time = 1.0 / fps
 
