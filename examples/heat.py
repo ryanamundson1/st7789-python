@@ -17,6 +17,7 @@ if len(sys.argv) < 1:
 
 def _get_capture_proc(fps):
   fps = fps
+  #'{}'.format(fps)
   return subprocess.Popen(['/home/pi/mlx90640-library/examples/rawrgb', '{}'.format(fps)], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
@@ -49,7 +50,7 @@ sleep_time = 1.0 / fps
 
 # Draw the image on the display hardware.
 print('Starting video')
-while camera.poll() is None:
+while True:
   time.sleep(sleep_time)
   frame = camera.stdout.read(size[0] * size[1] * 3)
   if frame:
