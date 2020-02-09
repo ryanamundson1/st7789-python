@@ -18,7 +18,7 @@ if len(sys.argv) < 1:
 def _get_capture_proc(fps):
   fps = fps
   #'{}'.format(fps)
-  return subprocess.Popen(['/home/pi/mlx90640-library/examples/rawrgb', '{}'.format(fps)], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+  return subprocess.Popen(['/home/pi/mlx90640-library/examples/rawrgb'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
 # Create ST7789 LCD display class.
@@ -53,6 +53,8 @@ print('Starting video')
 while True:
   time.sleep(sleep_time)
   frame = camera.stdout.read(size[0] * size[1] * 3)
+    
+  print(str(frame))
   if frame:
                             
     image = Image.frombytes('RGB', size, frame)
