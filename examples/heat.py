@@ -51,7 +51,7 @@ sleep_time = 1.0 / fps
 print('Starting video')
 while camera.poll() is None:
   time.sleep(sleep_time)
-  frame = camera.stdout.read(size[0] * size[1] * 3
+  frame = camera.stdout.read(size[0] * size[1] * 3)
   if frame:
                             
     image = Image.frombytes('RGB', size, frame)
