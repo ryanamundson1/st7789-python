@@ -33,7 +33,7 @@ disp = ST7789.ST7789(
 WIDTH = disp.width
 HEIGHT = disp.height
 
-fps = 6
+fps = 24
 
 # Initialize display.
 disp.begin()
@@ -59,7 +59,7 @@ while True:
                             
     image = Image.frombytes('RGB', size, frame)
     image = image.resize((WIDTH, HEIGHT), Image.ANTIALIAS)
-    image = image.transpose(Image.ROTATE_90)
+    image = image.transpose(Image.ROTATE_270)
     disp.display(image)
 
 
