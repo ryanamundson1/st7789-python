@@ -50,14 +50,11 @@ sleep_time = 1.0 / fps
 # Draw the image on the display hardware.
 print('Starting video')
 while camera.poll() is None:
-    
   time.sleep(sleep_time)
-
   frame = camera.stdout.read(size[0] * size[1] * 3
-  
   if frame:
+                            
     image = Image.frombytes('RGB', size, frame)
-  
     image = image.resize((WIDTH, HEIGHT), Image.ANTIALIAS)
   
     disp.display(image)
