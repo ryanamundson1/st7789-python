@@ -59,7 +59,7 @@ while True:
                             
     image = Image.frombytes('RGB', size, frame)
     image = image.resize((WIDTH, HEIGHT), Image.ANTIALIAS)
-  
+    image = image.transpose(Image.ROTATE_90)
     disp.display(image)
 
 
