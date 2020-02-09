@@ -33,7 +33,7 @@ disp = ST7789.ST7789(
 WIDTH = disp.width
 HEIGHT = disp.height
 
-fps = 24
+fps = 30
 
 # Initialize display.
 disp.begin()
