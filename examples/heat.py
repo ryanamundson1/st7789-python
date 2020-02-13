@@ -1,6 +1,6 @@
 import sys, subprocess, time
 
-from PIL import Image
+from PIL import Image, ImageOps
 import ST7789 as ST7789
 
 print("""
@@ -60,7 +60,7 @@ while True:
     image = Image.frombytes('RGB', size, frame)
     image = image.resize((WIDTH, HEIGHT), Image.ANTIALIAS)
     image = image.transpose(Image.ROTATE_270)
-    image = image.mirror()
+    image = ImageOps.mirror(image)
     disp.display(image)
 
 
